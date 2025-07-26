@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islamic/core/app_asset.dart';
-import 'package:islamic/core/app_color.dart';
 import 'package:islamic/core/app_const.dart';
 import 'package:islamic/screen/Sebha/sebha_screen.dart';
 import 'package:islamic/screen/hadith/hadith_screen.dart';
