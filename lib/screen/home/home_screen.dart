@@ -29,8 +29,8 @@ List<String> backImage=[
   AppAsset.home_background,
   AppAsset.hadith_background,
   AppAsset.sebha_background,
-  AppAsset.hadith_background,
-  AppAsset.hadith_background,
+  AppAsset.radio_background,
+  AppAsset.time_background,
 ];
   @override
   Widget build(BuildContext context) {

@@ -26,6 +26,7 @@ class ThemeManager {
             selectedIconTheme: IconThemeData(color: Colors.white),
             showSelectedLabels: true,
             showUnselectedLabels: false,
-            type: BottomNavigationBarType.fixed));
+            type: BottomNavigationBarType.fixed),
+    elevatedButtonTheme: ElevatedButtonThemeData(style: ButtonStyle(backgroundColor:WidgetStatePropertyAll(AppColor.fontColor),foregroundColor:WidgetStatePropertyAll(AppColor.primaryColor))));
   }
 }

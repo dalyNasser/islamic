@@ -31,6 +31,10 @@ abstract class AppAsset{
 
   static const String home_background='$home/tajmahal_back.jpg';
   static const String hadith_background='$home/hadith_back.png';
+  static const String time_background='$home/time_back.png';
+  static const String radio_background='$home/radio_back.png';
+  static const String play_background='$home/play_back.png';
+
   static const String sebha_background='$sebha_imgs/sebha_background.jpg';
 
 

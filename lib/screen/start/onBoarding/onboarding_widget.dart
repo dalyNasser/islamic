@@ -6,6 +6,7 @@ import 'package:islamic/core/route_app.dart';
 import 'package:islamic/model/onboardin_model.dart';
 import 'package:islamic/screen/start/onBoarding/stack_islmic.dart';
 import 'package:islamic/widget/text_widget.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingWidget extends StatefulWidget {
@@ -81,9 +82,12 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                         text_style: Theme.of(context).textTheme.labelSmall,
                       )
                     : TextWidget(
-                  ontap:()=> Navigator.pushReplacementNamed(context,RouteApp.homeScreen),
-                        text: AppString.finish,
-                        text_style: Theme.of(context).textTheme.labelSmall,
+                  ontap:()async {
+                    Navigator.pushReplacementNamed(
+                        context, RouteApp.homeScreen);
+                   // await  saveOnBoarding();},
+                    } , text: AppString.finish,
+                        text_style: Theme.of(context).textTheme.labelSmall
                       ),
               ],
             ),
@@ -92,5 +96,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
       ),
     );
   }
+  // saveOnBoarding()async{
+  //   final prefs=await SharedPreferences.getInstance();
+  //   prefs.setBool('onBoarding', true);
+  // }
 }
 

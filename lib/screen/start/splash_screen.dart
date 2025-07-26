@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamic/core/app_asset.dart';
 import 'package:islamic/core/route_app.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -10,9 +11,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  bool isNotFirst=false;
+  String page='';
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 5),()=>Navigator.pushReplacementNamed(context, RouteApp.onBoardingScreen));
+      if(isNotFirst)
+        page=RouteApp.onBoardingScreen;
+      else page= RouteApp.homeScreen;
+
+    Future.delayed(Duration(seconds: 5),(){Navigator.pushReplacementNamed(context,page);
+      },);
     super.initState();
   }
   @override
@@ -88,5 +96,10 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       ),
     );
+
   }
+  // saveOnBoarding()async{
+  //   final prefs=await SharedPreferences.getInstance();
+  // isNotFirst=  prefs.getBool('onBoarding')??false;
+  // }
 }

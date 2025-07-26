@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:islamic/core/app_asset.dart';
 import 'package:islamic/model/sebha_model.dart';
@@ -12,6 +14,7 @@ class SebhaScreen extends StatefulWidget {
 class _SebhaScreenState extends State<SebhaScreen> {
   int currentIndex=0;
   int count =0;
+  double turns=0;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -40,11 +43,11 @@ class _SebhaScreenState extends State<SebhaScreen> {
                ],),
             ),
 
-            Positioned(
-
-            child: InkWell(
+            InkWell(
               onTap: (){
-                setState(() { if(count==SebhaModel.tasbehList[currentIndex].count){
+                setState(() {
+                  turns=turns+(2*pi/33);
+                  if(count==SebhaModel.tasbehList[currentIndex].count){
                   count=0;
                   currentIndex=(currentIndex+1)% SebhaModel.tasbehList.length;
                 }
@@ -58,19 +61,25 @@ class _SebhaScreenState extends State<SebhaScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
+                  SizedBox(height: 10,),
                   Image.asset(
                     AppAsset.sebha_head,
                     width: 145,
-                    height: 86,
+                    height: 80,
+                    fit: BoxFit.fill,
                   ),
-                  Image.asset(
-                    AppAsset.sebha_body,
-                    width: 379,
-                    height: 381,
+                  AnimatedRotation(
+                    turns: turns,
+                    duration: Duration(milliseconds: 100),
+                    child: Image.asset(
+                      AppAsset.sebha_body,
+                      width: 379,
+                      height: 350,
+                    ),
                   )
                 ],
               ),
-            )),
+            ),
           ],
         )
       ],
