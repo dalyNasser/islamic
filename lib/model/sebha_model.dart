@@ -6,7 +6,11 @@
 
   SebhaModel({required this.count, required this.s_title, required this.s_content});
   static List<SebhaModel> tasbehList=[
-    SebhaModel(count: 33, s_title: 'سَبِّحِ اسْمَ رَبِّكَ الأعلى ', s_content: 'سبحان اللة')
+    SebhaModel(count: 33, s_title: 'سَبِّحِ اسْمَ رَبِّكَ الأعلى ', s_content: 'سبحان اللة'),
+    SebhaModel(count: 33, s_title: 'سَبِّحِ اسْمَ رَبِّكَ الأعلى ', s_content: 'الحمد لله'),
+    SebhaModel(count: 33, s_title: 'سَبِّحِ اسْمَ رَبِّكَ الأعلى ', s_content: 'الله اكبر'),
+    SebhaModel(count: 1, s_title: 'سَبِّحِ اسْمَ رَبِّكَ الأعلى ', s_content: 'لا الة الا الله'),
+
   ];
 
 }
