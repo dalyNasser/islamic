@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islamic/core/app_asset.dart';
 import 'package:islamic/core/app_color.dart';
 import 'package:islamic/model/radio_model.dart';

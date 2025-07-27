@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:islamic/core/app_asset.dart';
 import 'package:islamic/core/app_color.dart';
 import 'package:islamic/model/radio_model.dart';
 import 'package:islamic/screen/radio/costom_card.dart';
@@ -21,7 +20,6 @@ class _RadioScreenState extends State<RadioScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
     return SingleChildScrollView(
       child: Column(
         children: [

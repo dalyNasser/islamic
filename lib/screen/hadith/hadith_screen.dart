@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamic/core/app_asset.dart';
 import 'package:islamic/core/app_color.dart';
-import 'package:islamic/model/sebha_model.dart';
 
 class HadithScreen extends StatefulWidget {
   const HadithScreen({super.key});
