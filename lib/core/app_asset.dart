@@ -33,7 +33,12 @@ abstract class AppAsset{
   static const String hadith_background='$home/hadith_back.png';
   static const String time_background='$home/time_back.png';
   static const String radio_background='$home/radio_back.png';
-  static const String play_background='$home/play_back.png';
+  static const String play_background='$home/play_radio.png';
+
+  static const String c_right='$home/c_left.png';
+  static const String c_left='$home/c_right.png';
+  static const String evening_img='$home/evening_ic.png';
+  static const String morning_img='$home/morning_ic.png';
 
   static const String sebha_background='$sebha_imgs/sebha_background.jpg';
 

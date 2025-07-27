@@ -24,15 +24,9 @@ class _HadithScreenState extends State<HadithScreen> {
         Expanded(
           child: CarouselSlider.builder(
 
-
-
             itemCount: hadithes.length,
               itemBuilder: (context,i,pageIndex) {
-
-
-
                 return Container(
-
                   width: 313,
                   height: 818,
                   decoration: BoxDecoration(color: AppColor.fontColor,borderRadius: BorderRadius.circular(16)),
