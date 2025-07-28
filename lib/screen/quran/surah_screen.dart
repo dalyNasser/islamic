@@ -14,28 +14,19 @@ class SurahScreen extends StatefulWidget {
 
 class _SurahScreenState extends State<SurahScreen> {
   String fileContents = '';
-  String  content='';
-  List<String> verses =[];
-
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _loadFile();
-  // }
-
+  String content = '';
+  List<String> verses = [];
   Future<void> _loadFile(int num) async {
-
-    String contents = await  rootBundle.loadString('assets/text/Suras/$num.txt');
+    String contents = await rootBundle.loadString('assets/text/Suras/$num.txt');
     setState(() {
-     verses = contents.split('\n');
+      verses = contents.split('\n');
+    });
+  }
 
-    });}
-
-    @override
+  @override
   Widget build(BuildContext context) {
     final Surah surah = ModalRoute.of(context)!.settings.arguments as Surah;
-   verses.isEmpty? _loadFile(surah.surahNumber):();
+    verses.isEmpty ? _loadFile(surah.surahNumber) : ();
     return Scaffold(
       appBar: AppBar(
         title: Text(surah.englishName),
@@ -68,7 +59,6 @@ class _SurahScreenState extends State<SurahScreen> {
                 height: 92,
               ),
             ),
-
             Positioned(
               bottom: 0,
               child: Image.asset(
@@ -77,7 +67,8 @@ class _SurahScreenState extends State<SurahScreen> {
                 width: 400,
                 height: 112,
               ),
-            ) , Positioned(
+            ),
+            Positioned(
               top: 50,
               left: 25,
               right: 25,
@@ -85,19 +76,21 @@ class _SurahScreenState extends State<SurahScreen> {
                 width: double.infinity,
                 height: 550,
                 child: ListView.separated(
-
-                  separatorBuilder: (context,index)=>SizedBox(height: 10,),
-                  itemBuilder: (context,index){return  Text(
-                    textAlign: TextAlign.center,
+                  separatorBuilder: (context, index) => const SizedBox(
+                    height: 10,
+                  ),
+                  itemBuilder: (context, index) {
+                    return Text(
+                      textAlign: TextAlign.center,
                       textDirection: TextDirection.rtl,
-                      '${verses[index]}(${index+1})',
-
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(height: 2),
-                  ); },
+                      '${verses[index]}(${index + 1})',
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyMedium
+                          ?.copyWith(height: 2),
+                    );
+                  },
                   itemCount: verses.length,
-
-
-
                 ),
               ),
             )

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islamic/core/app_asset.dart';
-import 'package:islamic/core/app_color.dart';
 import 'package:islamic/core/app_string.dart';
-import 'package:islamic/model/onboardin_model.dart';
 
 abstract class AppConst {
   static List<BottomNavigationBarItem> bottom = [
@@ -15,8 +13,8 @@ abstract class AppConst {
         ),
         label: AppString.quran,
         activeIcon: Container(
-          padding: EdgeInsets.symmetric(horizontal: 12,vertical: 6),
-          decoration: BoxDecoration(
+          padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 6),
+          decoration: const BoxDecoration(
               color: Colors.black38,
 
               borderRadius: BorderRadius.all(Radius.circular(66))),
@@ -24,7 +22,7 @@ abstract class AppConst {
             AppAsset.ic_quran,
             width: 19,
             height: 22,
-            colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+            colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
           ),
         )),
     BottomNavigationBarItem(
@@ -35,8 +33,8 @@ abstract class AppConst {
       ),
       label: AppString.hadith,
   activeIcon: Container(
-  padding: EdgeInsets.symmetric(horizontal: 12,vertical: 6),
-  decoration: BoxDecoration(
+  padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 6),
+  decoration: const BoxDecoration(
   color: Colors.black38,
 
   borderRadius: BorderRadius.all(Radius.circular(66))),
@@ -44,7 +42,7 @@ abstract class AppConst {
   AppAsset.ic_hadeth,
   width: 19,
   height: 22,
-  colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
   ),
   )
     ),
@@ -56,8 +54,8 @@ abstract class AppConst {
       ),
       label: AppString.subhaa,
   activeIcon: Container(
-  padding: EdgeInsets.symmetric(horizontal: 12,vertical: 6),
-  decoration: BoxDecoration(
+  padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 6),
+  decoration: const BoxDecoration(
   color: Colors.black38,
 
   borderRadius: BorderRadius.all(Radius.circular(66))),
@@ -65,7 +63,7 @@ abstract class AppConst {
   AppAsset.ic_sebha,
   width: 19,
   height: 22,
-  colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
   ),
   )
     ),
@@ -77,8 +75,8 @@ abstract class AppConst {
       ),
       label: AppString.radio,
   activeIcon: Container(
-  padding: EdgeInsets.symmetric(horizontal: 12,vertical: 6),
-  decoration: BoxDecoration(
+  padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 6),
+  decoration: const BoxDecoration(
   color: Colors.black38,
 
   borderRadius: BorderRadius.all(Radius.circular(66))),
@@ -86,7 +84,7 @@ abstract class AppConst {
   AppAsset.ic_radio,
   width: 19,
   height: 22,
-  colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
   ),
   )
     ),
@@ -98,8 +96,8 @@ abstract class AppConst {
       ),
       label: AppString.time,
   activeIcon: Container(
-  padding: EdgeInsets.symmetric(horizontal: 12,vertical: 6),
-  decoration: BoxDecoration(
+  padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 6),
+  decoration: const BoxDecoration(
   color: Colors.black38,
 
   borderRadius: BorderRadius.all(Radius.circular(66))),
@@ -107,7 +105,7 @@ abstract class AppConst {
   AppAsset.ic_time,
   width: 19,
   height: 22,
-  colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
   ),
   )
     ),
