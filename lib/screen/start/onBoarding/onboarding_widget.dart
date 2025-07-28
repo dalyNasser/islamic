@@ -84,7 +84,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                   ontap:()async {
                     Navigator.pushReplacementNamed(
                         context, RouteApp.homeScreen);
-                    await  saveOnBoarding();},
+                   // await  saveOnBoarding();},
                     } , text: AppString.finish,
                         text_style: Theme.of(context).textTheme.labelSmall
                       ),
@@ -95,9 +95,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
       ),
     );
   }
-  saveOnBoarding()async{
-    final prefs=await SharedPreferences.getInstance();
-    prefs.setBool('onBoarding', true);
-  }
+  // saveOnBoarding()async{
+  //   final prefs=await SharedPreferences.getInstance();
+  //   prefs.setBool('onBoarding', true);
+  // }
 }
 
